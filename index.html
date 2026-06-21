@@ -40,11 +40,13 @@
   <div class="hero-stats"><div><div class="num">50+</div><div class="lbl">Years of combined<br>industry expertise</div></div><div><div class="num">Daily</div><div class="lbl">Van deliveries across<br>London &amp; the South East</div></div><div><div class="num">Since<br>2005</div><div class="lbl">Established at<br>Gatwick</div></div></div>
 </div>
 <div class="hero-card" id="quote"><h3>Get a fast, no-obligation quote</h3><p class="muted">Tell us what you need — we'll come back within one working day.</p>
-  <form onsubmit="event.preventDefault();this.querySelector('.btn').textContent='Thanks — we\'ll be in touch!';">
-    <div class="hc-field"><label>Your name</label><input type="text" required placeholder="Jane Smith"></div>
-    <div class="hc-field"><label>Work email</label><input type="email" required placeholder="jane@yourbrand.co.uk"></div>
-    <div class="hc-field"><label>What do you need?</label><select><option>E-commerce fulfilment &amp; pick/pack</option><option>Commercial storage &amp; warehousing</option><option>Transport &amp; distribution</option><option>Exhibition / event logistics</option><option>Not sure — help me decide</option></select></div>
+  <form class="js-quote-form" novalidate>
+    <div class="hc-field"><label>Your name</label><input type="text" name="name" required placeholder="Jane Smith"></div>
+    <div class="hc-field"><label>Work email</label><input type="email" name="email" required placeholder="jane@yourbrand.co.uk"></div>
+    <div class="hc-field"><label>What do you need?</label><select name="service"><option>E-commerce fulfilment &amp; pick/pack</option><option>Commercial storage &amp; warehousing</option><option>Transport &amp; distribution</option><option>Exhibition / event logistics</option><option>Not sure — help me decide</option></select></div>
+    <input type="text" name="company" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
     <button class="btn btn-primary" type="submit">Request my quote</button><p class="hc-note">No spam. No lock-in. We typically reply same day.</p>
+    <p class="form-msg" role="status" aria-live="polite"></p>
   </form></div></div></section>
 
 <div class="trust"><div class="wrap"><span class="label">Proven with brands you know</span><span class="client">FedEx Supply Chain</span><span class="client">Hackett</span><span class="client">Pepe Jeans</span><span class="client">East</span><span class="client">Prestige Distribution</span></div></div>
@@ -98,6 +100,4 @@
   <div><h4>Company</h4><a href="about.html">About</a><a href="case-studies.html">Case Studies</a><a href="3pl-gatwick.html">3PL in Gatwick</a><a href="contact.html">Contact</a></div>
   <div><h4>Get in touch</h4><a href="tel:01293773130">01293 773130</a><a href="mailto:info@niblocklogistics.co.uk">info@niblocklogistics.co.uk</a><a href="contact.html">Get a quote</a></div>
 </div><div class="foot-bottom"><span>© 2026 Niblock Logistics Solutions Ltd · Unit 8, Gatwick Business Park, Hookwood, Surrey RH6 0AH</span><span><a href="privacy.html" style="display:inline;margin:0">Privacy Policy</a> · <a href="terms.html" style="display:inline;margin:0">Terms</a></span></div></div></footer>
-<script src="site.js" defer></script>
-</body></html>
-                                                                                         
+<script src="assets

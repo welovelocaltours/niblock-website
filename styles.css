@@ -24,6 +24,8 @@ a{color:inherit;text-decoration:none}img{max-width:100%;display:block}
 .photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:2}
 .photo .ph-label{position:relative;z-index:1;text-align:center;color:#5e768c;font-family:'Plus Jakarta Sans';font-weight:600;font-size:.86rem;padding:18px;max-width:84%}
 .photo .ph-label svg{display:block;margin:0 auto 8px;opacity:.6}
+.hp{position:absolute!important;left:-9999px!important;width:1px;height:1px;opacity:0;overflow:hidden}
+.form-msg:empty{display:none}
 header{position:sticky;top:0;z-index:60;background:rgba(255,255,255,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
 .nav{display:flex;align-items:center;justify-content:space-between;height:74px}
 .logo{display:flex;align-items:center;gap:11px;font-family:'Plus Jakarta Sans';font-weight:800;font-size:1.3rem;color:var(--navy)}

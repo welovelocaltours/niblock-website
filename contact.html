@@ -23,13 +23,15 @@
 
 <section class="section"><div class="wrap grid-2">
 <div><div class="quote-card"><h3>Get a fast, no-obligation quote</h3><p class="muted">No spam, no lock-in. We typically reply same day.</p>
-<form onsubmit="event.preventDefault();this.querySelector('.btn').textContent='Thanks — we\'ll be in touch!';">
-<div class="hc-field"><label>Your name</label><input type="text" required placeholder="Jane Smith"></div>
-<div class="hc-field"><label>Work email</label><input type="email" required placeholder="jane@yourbrand.co.uk"></div>
-<div class="hc-field"><label>Phone</label><input type="tel" placeholder="07000 000000"></div>
-<div class="hc-field"><label>What do you need?</label><select><option>E-commerce fulfilment &amp; pick/pack</option><option>Commercial storage &amp; warehousing</option><option>Transport &amp; distribution</option><option>Exhibition / event logistics</option><option>Logistics consultancy</option><option>Not sure — help me decide</option></select></div>
-<div class="hc-field"><label>Tell us a bit more</label><textarea rows="3" placeholder="Roughly how many orders / pallets, and any deadlines"></textarea></div>
-<button class="btn btn-primary" type="submit">Request my quote</button></form></div></div>
+<form class="js-quote-form" novalidate>
+<div class="hc-field"><label>Your name</label><input type="text" name="name" required placeholder="Jane Smith"></div>
+<div class="hc-field"><label>Work email</label><input type="email" name="email" required placeholder="jane@yourbrand.co.uk"></div>
+<div class="hc-field"><label>Phone</label><input type="tel" name="phone" placeholder="07000 000000"></div>
+<div class="hc-field"><label>What do you need?</label><select name="service"><option>E-commerce fulfilment &amp; pick/pack</option><option>Commercial storage &amp; warehousing</option><option>Transport &amp; distribution</option><option>Exhibition / event logistics</option><option>Logistics consultancy</option><option>Not sure — help me decide</option></select></div>
+<div class="hc-field"><label>Tell us a bit more</label><textarea name="message" rows="3" placeholder="Roughly how many orders / pallets, and any deadlines"></textarea></div>
+<input type="text" name="company" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+<button class="btn btn-primary" type="submit">Request my quote</button>
+<p class="form-msg" role="status" aria-live="polite" style="margin-top:10px;font-size:.92rem"></p></form></div></div>
 <div><div class="map-card" style="background:var(--bg-soft);border:1px solid var(--line)">
 <div class="row"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--brand-dark)" stroke-width="2"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><div><strong style="color:var(--navy)">Niblock Logistics Solutions</strong><span style="color:var(--muted)">Unit 8, Gatwick Business Park, Kennel Lane, Hookwood, Surrey RH6 0AH</span></div></div>
 <div class="row"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--brand-dark)" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg><div><strong style="color:var(--navy)">01293 773130</strong><span style="color:var(--muted)">Mon–Fri, business hours</span></div></div>
@@ -43,7 +45,4 @@
   <div><h4>Services</h4><a href="ecommerce-fulfilment.html">E-commerce Fulfilment</a><a href="commercial-storage.html">Commercial Storage &amp; Warehousing</a><a href="transport-distribution.html">Transport &amp; Distribution</a><a href="exhibition-event-logistics.html">Exhibition &amp; Event Logistics</a><a href="logistics-consultancy.html">Logistics Management &amp; Consultancy</a></div>
   <div><h4>Company</h4><a href="about.html">About</a><a href="case-studies.html">Case Studies</a><a href="3pl-gatwick.html">3PL in Gatwick</a><a href="contact.html">Contact</a></div>
   <div><h4>Get in touch</h4><a href="tel:01293773130">01293 773130</a><a href="mailto:info@niblocklogistics.co.uk">info@niblocklogistics.co.uk</a><a href="contact.html">Get a quote</a></div>
-</div><div class="foot-bottom"><span>© 2026 Niblock Logistics Solutions Ltd · Unit 8, Gatwick Business Park, Hookwood, Surrey RH6 0AH</span><span><a href="privacy.html" style="display:inline;margin:0">Privacy Policy</a> · <a href="terms.html" style="display:inline;margin:0">Terms</a></span></div></div></footer>
-<script src="site.js" defer></script>
-</body></html>
-                                                                                         
+</div><div class="foot-bottom"><span>© 2026 Niblock Logistics Solutions Ltd · Unit 8, Gatwick Business Park, Hookwood, Surrey RH6 0AH</span><span><a href="privacy.html" style="display:inline;margin:0">Privacy Policy</a> · <a href="terms.html" style="display:inline;margin

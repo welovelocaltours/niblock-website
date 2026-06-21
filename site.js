@@ -14,3 +14,34 @@
     } else { els.forEach(function(el){el.classList.add('in');}); }
   }
 })();
+
+/* Quote / contact form -> /api/quote (Resend) */
+(function(){
+  var forms=[].slice.call(document.querySelectorAll('.js-quote-form'));
+  forms.forEach(function(f){
+    f.addEventListener('submit',function(e){
+      e.preventDefault();
+      var btn=f.querySelector('button[type=submit]');
+      var msg=f.querySelector('.form-msg');
+      var data={};
+      [].slice.call(f.querySelectorAll('input,select,textarea')).forEach(function(el){
+        if(el.name) data[el.name]=el.value;
+      });
+      if(!data.name||!data.email){ if(msg){msg.style.color='#c0392b';msg.textContent='Please add your name and email.';} return; }
+      var orig=btn?btn.textContent:'';
+      if(btn){btn.disabled=true;btn.textContent='Sending…';}
+      if(msg){msg.style.color='';msg.textContent='';}
+      fetch('/api/quote',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)})
+        .then(function(r){return r.ok?r.json():Promise.reject(r);})
+        .then(function(){
+          f.reset();
+          if(btn){btn.textContent='Thanks — we’ll be in touch!';}
+          if(msg){msg.style.color='#0a7d28';msg.textContent='Your enquiry has been sent. We reply within one working day.';}
+        })
+        .catch(function(){
+          if(btn){btn.disabled=false;btn.textContent=orig;}
+          if(msg){msg.style.color='#c0392b';msg.innerHTML='Sorry, something went wrong. Please call 01293 773130 or email <a href="mailto:info@niblocklogistics.co.uk">info@niblocklogistics.co.uk</a>.';}
+        });
+    });
+  });
+})();
