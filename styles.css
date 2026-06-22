@@ -155,7 +155,7 @@ html{overflow-x:clip}
 .foot-brand .logo{display:block;width:172px;height:44px;background:url(niblock-logo-white.png) no-repeat left center/170px auto}
 .foot-brand .logo>*{display:none}
 @media(max-width:920px){
-  .hero-grid{grid-template-columns:1fr;gap:34px;padding:48px 0 60px}
+  .hero-grid{grid-template-columns:1fr;gap:34px;padding:48px 22px 60px}
   .band,.quote-wrap,.loc-grid,.inside-grid,.grid-2,.cs-grid{grid-template-columns:1fr;gap:26px}
   .band{padding:34px}
   .quote-wrap,.grid-2,.loc-grid,.inside-grid{align-items:start}
