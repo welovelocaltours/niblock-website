@@ -152,7 +152,7 @@ footer a{display:block;color:#b4c2d6;margin-bottom:10px;font-size:.95rem}footer 
 .foot-bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;padding-top:22px;font-size:.85rem;color:#7e8ba0}
 .proto-flag{position:fixed;left:14px;bottom:14px;z-index:80;background:var(--gold);color:#3a2a06;font-weight:700;font-size:.78rem;padding:8px 14px;border-radius:999px;box-shadow:var(--shadow);font-family:'Plus Jakarta Sans'}
 html{overflow-x:clip}
-.foot-brand .logo{display:block;width:170px;height:50px;background:#fff url(niblock-logo.png) no-repeat center/132px auto;border-radius:9px}
+.foot-brand .logo{display:block;width:172px;height:44px;background:url(niblock-logo-white.png) no-repeat left center/170px auto}
 .foot-brand .logo>*{display:none}
 @media(max-width:920px){
   .hero-grid{grid-template-columns:1fr;gap:34px;padding:48px 0 60px}
