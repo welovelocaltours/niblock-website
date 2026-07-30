@@ -45,3 +45,33 @@
     });
   });
 })();
+
+
+/* ---- Google Analytics 4 with cookie consent (UK PECR) ---- */
+(function(){
+  var GA_ID='G-0CJEB18WCV', KEY='niblockCookieConsent';
+  function loadGA(){
+    if(window.__gaLoaded) return; window.__gaLoaded=true;
+    var s=document.createElement('script'); s.async=true;
+    s.src='https://www.googletagmanager.com/gtag/js?id='+GA_ID;
+    document.head.appendChild(s);
+    window.dataLayer=window.dataLayer||[];
+    window.gtag=function(){dataLayer.push(arguments);};
+    gtag('js', new Date());
+    gtag('config', GA_ID, {anonymize_ip:true});
+  }
+  function removeBanner(){var b=document.getElementById('cookie-banner'); if(b&&b.parentNode) b.parentNode.removeChild(b);}
+  function showBanner(){
+    if(document.getElementById('cookie-banner')) return;
+    var b=document.createElement('div'); b.id='cookie-banner'; b.className='cookie-banner';
+    b.setAttribute('role','dialog'); b.setAttribute('aria-label','Cookie consent');
+    b.innerHTML='<p>We use cookies to measure site traffic and improve your experience. See our <a href="privacy.html">Privacy Policy</a>.</p>'+
+      '<div class="cookie-actions"><button type="button" class="cb-decline">Decline</button><button type="button" class="cb-accept">Accept</button></div>';
+    document.body.appendChild(b);
+    b.querySelector('.cb-accept').onclick=function(){try{localStorage.setItem(KEY,'granted');}catch(e){} loadGA(); removeBanner();};
+    b.querySelector('.cb-decline').onclick=function(){try{localStorage.setItem(KEY,'denied');}catch(e){} removeBanner();};
+  }
+  var c=null; try{c=localStorage.getItem(KEY);}catch(e){}
+  if(c==='granted') loadGA();
+  else if(c!=='denied'){ if(document.body) showBanner(); else document.addEventListener('DOMContentLoaded',showBanner); }
+})();

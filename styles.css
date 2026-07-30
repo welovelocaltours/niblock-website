@@ -203,3 +203,16 @@ html{overflow-x:clip}
 .nav-links>a::after{content:"";position:absolute;left:0;bottom:-5px;width:0;height:2px;background:var(--brand);transition:width .25s ease}
 .nav-links>a:hover::after{width:100%}
 @media(prefers-reduced-motion:reduce){.reveal{opacity:1!important;transform:none!important}.hero-bg img{animation:none}.hero-bg video{display:none}.btn-primary::after,.btn-dark::after{display:none}}
+
+
+/* ---- cookie consent banner ---- */
+.cookie-banner{position:fixed;left:0;right:0;bottom:0;z-index:200;background:#0a2138;color:#d6dee8;padding:14px 20px;display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap:wrap;box-shadow:0 -6px 24px rgba(0,0,0,.25);font-size:.9rem;line-height:1.45}
+.cookie-banner p{margin:0;max-width:640px}
+.cookie-banner a{color:var(--brand-2);text-decoration:underline}
+.cookie-actions{display:flex;gap:10px;flex:0 0 auto}
+.cookie-banner button{font-family:'Plus Jakarta Sans';font-weight:700;border-radius:999px;padding:9px 20px;font-size:.88rem;cursor:pointer;border:0;transition:.15s}
+.cookie-banner .cb-accept{background:var(--brand);color:#fff}
+.cookie-banner .cb-accept:hover{background:var(--brand-dark)}
+.cookie-banner .cb-decline{background:transparent;color:#d6dee8;border:1.5px solid rgba(255,255,255,.3)}
+.cookie-banner .cb-decline:hover{border-color:#fff}
+@media(max-width:600px){.cookie-banner{flex-direction:column;gap:10px;text-align:center}}
